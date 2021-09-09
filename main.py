@@ -8,7 +8,7 @@ for train_index, test_index in tscv.split(X1):
     print("TRAIN:", train_index, "\n", "TEST:", test_index)
     X1_train, X1_test = X1[train_index], X1[test_index]
     y1_train, y1_test = y1[train_index], y1[test_index]
-    rnn = LSTM(X1_train)
+    rnn = LSTM(X1_train
 
 # SGDRegressor(alpha=0.0001, average=False, epsilon=0.1, eta0=0.01,
 #              fit_intercept=True, l1_ratio=0.15, learning_rate='invscaling',

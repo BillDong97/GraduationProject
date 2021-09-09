@@ -12,7 +12,7 @@ plt.plot(time1, doData["出水"])
 plt.plot(time1, doData["4L"])
 plt.plot(time1, doData["3L"])
 # plt.plot(time1, doData["2L"])
-plt.show()
+# plt.show()
 
 
 mixedData = pd.read_excel('混床.xlsx', header=0)
@@ -21,8 +21,11 @@ X2 = np.array(mixedData.iloc[:, 2:])
 y2 = np.array(mixedData["累积水量"])
 fig2 = plt.figure(figsize=(20, 15))
 plt.plot(time2, mixedData["出水"])
-
-
+plt.plot(time2, mixedData["4L"])
+plt.plot(time2, mixedData["3L"])
+plt.plot(time2, mixedData["2L"])
+plt.plot(time2, mixedData["进水"])
+plt.show()
 
 
 doExpire = np.array([[14.00, 150, 150, 150, 150, 60]])
