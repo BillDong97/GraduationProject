@@ -5,15 +5,14 @@ import numpy as np
 
 
 doData = pd.read_excel('除氧床.xlsx', header=0)
-time1 = np.array(doData["运行时长"])
-x1 = np.array(doData.iloc[:, 2:7], dtype='float32')
+time1 = np.array(doData.iloc[:, 0])
+x1 = np.array(doData.iloc[:, 1:6], dtype='float32')
 y1 = np.array(doData['出水'], dtype='float32')
 
 mixedData = pd.read_excel('混床.xlsx', header=0)
-time2 = np.array(mixedData["运行时长"])
-x2 = np.array(mixedData.iloc[:, 2:], dtype='float32')
-# x2 = np.array(mixedData.iloc[:, 3], dtype='float32')
-y2 = np.array(mixedData['累积水量'], dtype='float32')
+time2 = np.array(mixedData.iloc[:401, 0])
+x2 = np.array(mixedData.iloc[:401, 1:6], dtype='float32')
+y2 = np.array(mixedData.iloc[:401, 6], dtype='float32')
 
 
 def data_split(x, y, time, train_data_ratio):
