@@ -18,7 +18,7 @@ if __name__ == '__main__':
     x_test_tensor = torch.from_numpy(x_test.reshape(1, -1, 5))
     y_predict_tensor = model(x_test_tensor)
     y_predict = y_predict_tensor.detach().numpy().reshape(-1)
-
+    print(r2_score(y_test, y_predict))
     # 作图
     plt.figure()
     plt.plot(t_test, y_test, label='test')
