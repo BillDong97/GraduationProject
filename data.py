@@ -14,6 +14,11 @@ time2 = np.array(mixedData.iloc[:, 0])
 x2 = np.array(mixedData.iloc[:, 1:6], dtype='float32')
 y2 = np.array(mixedData.iloc[:, 6], dtype='float32')
 
+SmallMixedData = pd.read_excel('小装置混床.xlsx', header=0)
+time3 = np.array(SmallMixedData.iloc[:, 0])
+x3 = np.array(SmallMixedData.iloc[:, 1:9], dtype='float32')
+y3 = np.array(SmallMixedData.iloc[:, 9:], dtype='float32')
+
 
 def data_split(x, y, time, train_data_ratio):
     data_len = len(x)

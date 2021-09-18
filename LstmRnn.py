@@ -35,7 +35,7 @@ def train(x_train, y_train, x_feature_num, y_feature_num, hidden_size, max_epoch
         loss.backward()
         optimizer.step()
 
-        if loss.item() < 1e-4:
+        if loss.item() < 1e-5:
             print('Epoch [{}/{}], loss: {:.5f}'.format(epoch + 1, max_epochs, loss.item()))
             print('The loss value is reached')
             break
